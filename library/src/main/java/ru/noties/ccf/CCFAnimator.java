@@ -3,6 +3,7 @@ package ru.noties.ccf;
 import android.animation.ValueAnimator;
 import android.graphics.Color;
 import android.support.annotation.ColorInt;
+import android.support.annotation.FloatRange;
 import android.support.annotation.IntRange;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -245,7 +246,7 @@ public abstract class CCFAnimator {
      * @param fraction current animation fraction
      * @return color
      */
-    public abstract int getColor(float fraction);
+    public abstract int getColor(@FloatRange(from = .0F, to = 1.F) float fraction);
 
 
     public ValueAnimator asValueAnimator(@NonNull final OnNewColorListener onNewColorListener) {
